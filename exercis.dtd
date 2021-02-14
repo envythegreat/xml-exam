@@ -20,6 +20,6 @@
 <!ELEMENT operation EMPTY>
 <!ATTLIST operation
   date CDATA #REQUIRED
-  description CDATA #REQUIRED
+  description CDATA #IMPLIED
   montant CDATA #REQUIRED
   type (CREDIT|DEBIT) #REQUIRED>
