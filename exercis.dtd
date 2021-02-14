@@ -12,7 +12,7 @@
 <!ATTLIST solde
   xmlns CDATA #FIXED ''>
 
-<!ELEMENT operations (operation)+>
+<!ELEMENT operations (operation+)>
 <!ATTLIST operations
   dateDebut CDATA #REQUIRED
   dateFin CDATA #REQUIRED>
@@ -20,6 +20,6 @@
 <!ELEMENT operation EMPTY>
 <!ATTLIST operation
   date CDATA #REQUIRED
-  desciption CDATA #REQUIRED
+  description CDATA #REQUIRED
   montant CDATA #REQUIRED
-  type CDATA #REQUIRED>
+  type (CREDIT|DEBIT) #REQUIRED>

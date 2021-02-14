@@ -4,5 +4,11 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="https://www.w3.org/2001/XMLSchema"
 >
-
+  <xsl:template match="/">
+    <html>
+      <body>
+        <h3>Ex Example</h3>
+      </body>
+    </html>
+  </xsl:template>
 </xsl:stylesheet>
