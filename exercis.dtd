@@ -1,0 +1,25 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT releve (dateReleve,solde,operations)>
+<!ATTLIST releve
+  RIB NMTOKEN #REQUIRED>
+
+<!ELEMENT dateReleve (#PCDATA)>
+<!ATTLIST dateReleve
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT solde (#PCDATA)>
+<!ATTLIST solde
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT operations (operation)+>
+<!ATTLIST operations
+  dateDebut CDATA #REQUIRED
+  dateFin CDATA #REQUIRED>
+
+<!ELEMENT operation EMPTY>
+<!ATTLIST operation
+  date CDATA #REQUIRED
+  desciption CDATA #REQUIRED
+  montant CDATA #REQUIRED
+  type CDATA #REQUIRED>
