@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- <!DOCTYPE releve SYSTEM "exercis.dtd" > -->
+
+<!-- question 3 -->
 <?xml-stylesheet type="text/xsl" href="styles.xsl" ?>
+
+<!-- question 4 -->
+<!-- <?xml-stylesheet type="text/xsl" href="onlyCREDIT.xsl" ?> -->
 
 
 <releve RIB="011112222333344445555666"
