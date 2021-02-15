@@ -4,19 +4,17 @@
   <xs:element name="releve">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="dateReleve"></xs:element>
-        <xs:element name="solde"></xs:element>
+        <xs:element name="dateReleve" type="xs:date"></xs:element>
+        <xs:element name="solde" type="xs:float"></xs:element>
         <xs:element name="operations"></xs:element>
       </xs:sequence>
-      <xs:attribute type="xs:int" name="RIB" use="required"></xs:attribute>
+      <xs:attribute type="xs:integer" name="RIB" use="required"></xs:attribute>
     </xs:complexType>
   </xs:element>
-  <xs:element name="dateReleve" type="xs:date"></xs:element>
-  <xs:element name="sold" type="xs:float"></xs:element>
   <xs:element name="operations">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="operation"></xs:element>
+        <xs:element name="operation" minOccurs="1" maxOccurs="unbounded"></xs:element>
       </xs:sequence>
       <xs:attribute type="xs:date" name="dateDebut"></xs:attribute>
       <xs:attribute type="xs:date" name="dateFin"></xs:attribute>
@@ -24,10 +22,16 @@
   </xs:element>
   <xs:element name="operation">
     <xs:complexType>
-      <xs:attribute name="type" type="xs:string" use="required"></xs:attribute>
+      <xs:attribute name="type" type="accountType" use="required"></xs:attribute>
       <xs:attribute name="date" type="xs:date" use="required"></xs:attribute>
       <xs:attribute name="montant" type="xs:float" use="required"></xs:attribute>
       <xs:attribute name="description" type="xs:string" use="optional"></xs:attribute>
     </xs:complexType>
   </xs:element>
+  <xs:simpleType name="accountType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CREDIT"></xs:enumeration>
+      <xs:enumeration value="DEBIT"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
