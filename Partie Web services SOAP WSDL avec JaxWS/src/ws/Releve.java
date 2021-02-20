@@ -10,37 +10,48 @@ public class Releve {
 	private Date dateReleve; 
 	List<Operation> Operations = new ArrayList<Operation>();
 	
-	public int getRIB() {
-		return RIB;
-	}
-	
 	public Releve() {
 		super();
 	}
 	
-	public Releve(int rIB, double sold, Date dateReleve, List<Operation> oprations) {
+	public Releve(int rIB, double sold, Date datereleve, List<Operation> oprations) {
 		super();
-		RIB = rIB;
+		this.RIB = rIB;
 		this.sold = sold;
-		this.dateReleve = dateReleve;
+		this.dateReleve = datereleve;
 		this.Operations = oprations;
 	}
-	
+
+	public int getRIB() {
+		return RIB;
+	}
+
 	public void setRIB(int rIB) {
 		RIB = rIB;
 	}
+
 	public double getSold() {
 		return sold;
 	}
+
 	public void setSold(double sold) {
 		this.sold = sold;
 	}
-	
+
 	public Date getDateReleve() {
 		return dateReleve;
 	}
+
 	public void setDateReleve(Date dateReleve) {
 		this.dateReleve = dateReleve;
+	}
+
+	public List<Operation> getOperations() {
+		return Operations;
+	}
+
+	public void setOperations(List<Operation> operations) {
+		Operations = operations;
 	}
 	
 	
