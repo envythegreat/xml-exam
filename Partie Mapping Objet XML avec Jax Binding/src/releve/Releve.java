@@ -1,70 +1,64 @@
 package releve;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.xml.bind.annotation.*;
 
 
-public class Releve {
-	private int RIB;
-	private double sold;
-	private Date dateReleve; 
-	List<Operation> Operations = new ArrayList<Operation>();
+@XmlRootElement(name="Releve")
+
+public class Releve implements Serializable{
+	@XmlAttribute(name = "RIB", required = true)
+	private long  rib;
+	private Date dateReleve;
+	private float solde;
 	
 	
-	public List<Operation> Listoperations() {
-		Operations.add(new Operation("CREDIT", 1234.23,"My operation 1" ,new Date()));
-		Operations.add(new Operation("CREDIT", 7412.23,"My operation 2" ,new Date()));
-		Operations.add(new Operation("DEBIT", 23659.23,"My operation 3" ,new Date()));
-		Operations.add(new Operation("CREDIT", 6398.23,"My operation 5",new Date()));
-		Operations.add(new Operation("DEBIT", 3297.23,"My operation 4",new Date()));
-		return Operations;
-	};
+	private List<Operation> operations;
 	
-	public Releve() {
+	public Releve(Long rib, Date dateReleve, float solde) {
 		super();
+		this.rib = rib;
+		this.dateReleve = dateReleve;
+		this.solde = solde;
+		operations=new ArrayList<>();
 	}
 	
-	public Releve(int rIB, double sold, Date datereleve, List<Operation> oprations) {
-		super();
-		this.RIB = rIB;
-		this.sold = sold;
-		this.dateReleve = datereleve;
-		this.Operations = oprations;
+	public Long getRib() {
+		return rib;
 	}
-
-	public int getRIB() {
-		return RIB;
+	public void setRib(long rib) {
+		this.rib = rib;
 	}
-
-	public void setRIB(int rIB) {
-		RIB = rIB;
-	}
-
-	public double getSold() {
-		return sold;
-	}
-
-	public void setSold(double sold) {
-		this.sold = sold;
-	}
-
 	public Date getDateReleve() {
 		return dateReleve;
 	}
-
 	public void setDateReleve(Date dateReleve) {
 		this.dateReleve = dateReleve;
 	}
-
+	public float getSolde() {
+		return solde;
+	}
+	public void setSolde(float solde) {
+		this.solde = solde;
+	}
 	public List<Operation> getOperations() {
-		return Operations;
+		return operations;
 	}
+	public void setOperations(List<Operation> operations) {
+		this.operations = operations;
+	}
+	public Releve() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void addOperation(Operation op) {
+		if(op!=null)
+		operations.add(op);
+	}
+	
 
-	public void setOperations(Operation operation) {
-		Operations.add(operation);
-	}
-	
-	
-	
 }
