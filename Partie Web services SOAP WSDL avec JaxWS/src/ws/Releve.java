@@ -50,8 +50,8 @@ public class Releve {
 		return Operations;
 	}
 
-	public void setOperations(List<Operation> operations) {
-		Operations = operations;
+	public void setOperations(Operation operation) {
+		Operations.add(operation);
 	}
 	
 	
