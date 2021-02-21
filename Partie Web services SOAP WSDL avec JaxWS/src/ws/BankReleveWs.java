@@ -13,12 +13,12 @@ public class BankReleveWs {
 	List<Operation> Operations = new ArrayList<Operation>();
 	
 	
-	@WebMethod
+	@WebMethod(operationName = "operationList")
 	public List<Operation> Listoperations() {
 		Operations.add(new Operation("CREDIT", 1525.23,"My operation 1" ,new Date()));
 		Operations.add(new Operation("CREDIT", 1525.23,"My operation 2" ,new Date()));
 		Operations.add(new Operation("DEBIT", 1525.23,"My operation 3" ,new Date()));
-		Operations.add(new Operation("CREDIT", 1525.23,new Date()));
+		Operations.add(new Operation("CREDIT", 1525.23,"My operation 5",new Date()));
 		Operations.add(new Operation("DEBIT", 1525.23,"My operation 4",new Date()));
 		return Operations;
 	};
