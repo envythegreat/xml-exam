@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name="releve")
 public class Releve {
+	@XmlAttribute(name = "RIB", required = true)
 	private long  rib;
 	private Date dateReleve;
 	private float solde;

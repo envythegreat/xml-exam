@@ -1,7 +1,6 @@
 package restapi;
 
 import java.io.*;
-import java.util.List;
 
 import javax.xml.bind.*;
 
@@ -17,8 +16,6 @@ public class ServiceRest {
 		JAXBContext jc=JAXBContext.newInstance(Releve.class);
 		Unmarshaller unmarshaller=jc.createUnmarshaller();
 		Releve releve=(Releve) unmarshaller.unmarshal(new File("releve.xml"));
-		List<Operation> operation = releve.getOperations();
-		
 		
 		get("/relevebank", (req, res) -> {
 			res.header("content-type", "application/json");
