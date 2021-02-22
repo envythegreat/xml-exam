@@ -13,6 +13,7 @@
 	    <artifactId>spark-core</artifactId>
 	    <version>2.9.3</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 	<dependency>
 	    <groupId>com.google.code.gson</groupId>
 	    <artifactId>gson</artifactId>

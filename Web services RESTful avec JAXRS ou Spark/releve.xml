@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Releve RIB="467443643">
+<releve RIB="467443643">
     <dateReleve>2021-02-21T22:06:49.799Z</dateReleve>
     <operations>
         <date>2021-02-21T22:06:49.802Z</date>
@@ -26,4 +26,4 @@
         <type>CREDIT</type>
     </operations>
     <solde>46848.0</solde>
-</Releve>
+</releve>
