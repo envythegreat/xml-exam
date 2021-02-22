@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Releve RIB="467443643">
+    <dateReleve>2021-02-21T22:06:49.799Z</dateReleve>
+    <operations>
+        <date>2021-02-21T22:06:49.802Z</date>
+        <description>Lorem epo</description>
+        <montant>2013.0</montant>
+        <type>CREDIT</type>
+    </operations>
+    <operations>
+        <date>2021-02-21T22:06:49.802Z</date>
+        <description>Lorem Epsum</description>
+        <montant>2006.0</montant>
+        <type>CREDIT</type>
+    </operations>
+    <operations>
+        <date>2021-02-21T22:06:49.802Z</date>
+        <description>Helloopl</description>
+        <montant>1949.0</montant>
+        <type>DEBIT</type>
+    </operations>
+    <operations>
+        <date>2021-02-21T22:06:49.802Z</date>
+        <description>Hello</description>
+        <montant>2013.0</montant>
+        <type>CREDIT</type>
+    </operations>
+    <solde>46848.0</solde>
+</Releve>
